@@ -11,6 +11,7 @@ import { useWalletStore } from "@/store/wallet";
 import { InvoiceStatus } from "@/components/invoice/InvoiceStatus";
 import { InvoiceStatusTimeline } from "@/components/invoice/InvoiceStatusTimeline";
 import { DeliveryConfirmationStatus } from "@/components/invoice/DeliveryConfirmationStatus";
+import { AttestationStatus } from "@/components/invoice/AttestationStatus";
 import { Button } from "@/components/ui/button";
 import { TransactionPending } from "@/components/shared/TransactionPending";
 import {
@@ -242,6 +243,10 @@ export default function InvoiceDetailClient({
 
         <div className="bg-card border border-border rounded-lg p-5 space-y-4">
           <DeliveryConfirmationStatus invoice={invoice} />
+        </div>
+
+        <div className="bg-card border border-border rounded-lg p-5 space-y-4">
+          <AttestationStatus invoice={invoice} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
